@@ -1,7 +1,8 @@
 import AppError from "../utils/appError.js";
 import catchAsync from "../utils/catchAsync.js";
 import Customer from "./../models/customerModel.js";
-import Employee from "../models/EmployeeModel.js";
+// import Employee from "../models/EmployeeModel.js";
+const Employee = require("../models/employeeModel.js");
 
 const getAll = catchAsync(async (req, res, next) => {
   // Empty `filter` means "match all documents"
