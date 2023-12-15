@@ -12,11 +12,11 @@ router.get("/", authController.protect, employeeController.getAll);
 router.get("/:id", authController.protect, employeeController.get);
 
 router.post("/login", authController.login);
+router.post("/signup", authController.signup);
 
 // Protect all routes after this middlewares
 router.use(authController.protect);
 router.get("/logout", authController.logout);
-// router.post("/signup", authController.signup);
 
 router.post(
   "/create-employee",
