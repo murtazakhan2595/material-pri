@@ -11,9 +11,9 @@ const AppError = require("../utils/appError.js");
 const catchAsync = require("../utils/catchAsync.js");
 // const Employee = require("../models/EmployeeModel.js");
 const Employee = require("../models/employeeModel.js");
-const Jimp = require("jimp");
-const sharp = require("sharp");
-const path = require("path");
+// const Jimp = require("jimp");
+// const sharp = require("sharp");
+// const path = require("path");
 // const { dirname } = require("path");
 // const { fileURLToPath } = require("url");
 
