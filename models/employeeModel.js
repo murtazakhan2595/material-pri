@@ -67,4 +67,4 @@ employeeSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
 
 const Employee = mongoose.model("Employee", employeeSchema);
 
-export default Employee;
+module.exports=Employee;

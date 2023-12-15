@@ -1,6 +1,7 @@
 import AppError from "../utils/appError.js";
 import catchAsync from "../utils/catchAsync.js";
-import Employee from "../models/EmployeeModel.js";
+// import Employee from "../models/EmployeeModel.js";
+const Employee = require('../models/employeeModel.js')
 import jwt from "jsonwebtoken";
 import { promisify } from "util";
 
