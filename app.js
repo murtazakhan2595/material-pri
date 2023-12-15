@@ -12,10 +12,10 @@ const express = require("express");
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const { router: employeeRouter } = require("./routes/employeeRoutes.js");
-const { router: customerRouter } = require("./routes/customerRoutes.js");
-const { router: productRouter } = require("./routes/productRoutes.js");
-const { router: quoteRouter } = require("./routes/quoteRoutes.js");
+const employeeRouter  = require("./routes/employeeRoutes.js");
+const customerRouter  = require("./routes/customerRoutes.js");
+const productRouter  = require("./routes/productRoutes.js");
+const quoteRouter  = require("./routes/quoteRoutes.js");
 const globalErrorHandler = require("./controllers/errorController.js");
 const AppError = require("./utils/appError.js");
 

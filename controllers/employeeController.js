@@ -14,8 +14,8 @@ const Employee = require("../models/employeeModel.js");
 const Jimp = require("jimp");
 const sharp = require("sharp");
 const path = require("path");
-const { dirname } = require("path");
-const { fileURLToPath } = require("url");
+// const { dirname } = require("path");
+// const { fileURLToPath } = require("url");
 
 
 
@@ -58,30 +58,30 @@ const createEmployee = catchAsync(async (req, res, next) => {
       new AppError("You do not have permission to perform this action", 403)
     );
   }
-  let imgPath;
-  let jimpRes;
+  // let imgPath;
+  // let jimpRes;
 
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = dirname(__filename);
+  // const __filename = fileURLToPath(import.meta.url);
+  // const __dirname = dirname(__filename);
 
-  if (image?.length > 0) {
-    console.log("reaching here", name, email, role, location, image);
-    // preprocess the image
-    const buffer = Buffer.from(
-      image.replace(/^data:image\/(png|jpg|jpeg);base64,/, ""),
-      "base64"
-    );
-    imgPath = `${Date.now()}-${Math.round(Math.random() * 100000)}.png`;
-    jimpRes = await Jimp.read(buffer);
-    jimpRes
-      //   .resize(200, Jimp.AUTO) i want to keep original res intact
-      .write(path.resolve(__dirname, `../storage/${imgPath}`));
+  // if (image?.length > 0) {
+  //   console.log("reaching here", name, email, role, location, image);
+  //   // preprocess the image
+  //   const buffer = Buffer.from(
+  //     image.replace(/^data:image\/(png|jpg|jpeg);base64,/, ""),
+  //     "base64"
+  //   );
+  //   imgPath = `${Date.now()}-${Math.round(Math.random() * 100000)}.png`;
+  //   jimpRes = await Jimp.read(buffer);
+  //   jimpRes
+  //     //   .resize(200, Jimp.AUTO) i want to keep original res intact
+  //     .write(path.resolve(__dirname, `../storage/${imgPath}`));
 
-    await sharp(buffer)
-      // Resize or apply other operations if needed
-      // .resize(200, 200)
-      .toFile(path.resolve(__dirname, `../storage/${imgPath}`));
-  }
+  //   await sharp(buffer)
+  //     // Resize or apply other operations if needed
+  //     // .resize(200, 200)
+  //     .toFile(path.resolve(__dirname, `../storage/${imgPath}`));
+  // }
 
   const newEmployee = await Employee.create({
     name,
@@ -90,7 +90,7 @@ const createEmployee = catchAsync(async (req, res, next) => {
     status,
     role,
     location,
-    image,
+    // image,
   });
 
   console.log("New employe created ->", newEmployee);
