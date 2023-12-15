@@ -1,4 +1,6 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
+const mongoose = require("mongoose");
+
 
 // Define the Firework schema
 // const flatworkSchema = new mongoose.Schema({
@@ -31,4 +33,5 @@ const flatworkSchema = new mongoose.Schema({
 
 
 const Flatwork = mongoose.model("Flatwork", flatworkSchema);
-export default Flatwork;
+// export default Flatwork;
+module.exports = Flatwork;

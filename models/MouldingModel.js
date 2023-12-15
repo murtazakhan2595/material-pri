@@ -1,4 +1,6 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
+const mongoose = require("mongoose");
+
 
 // Define the Mouldings schema
 const mouldingSchema = new mongoose.Schema({
@@ -18,4 +20,5 @@ const mouldingSchema = new mongoose.Schema({
 });
 
 const Moulding = mongoose.model("Mouldings", mouldingSchema);
-export default Moulding;
+// export default Moulding;
+module.exports = Moulding;

@@ -1,6 +1,10 @@
-import express from "express";
-import authController from "../controllers/authController.js";
-import customerController from "../controllers/customerController.js";
+// import express from "express";
+// import authController from "../controllers/authController.js";
+// import customerController from "../controllers/customerController.js";
+const express = require("express");
+const authController = require("../controllers/authController.js");
+const customerController = require("../controllers/customerController.js");
+
 
 const router = express.Router();
 
@@ -26,4 +30,5 @@ router.patch(
   customerController.update
 );
 
-export { router };
+// export { router };
+module.exports =router;

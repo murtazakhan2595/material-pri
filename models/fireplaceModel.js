@@ -1,4 +1,6 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
+const mongoose = require("mongoose");
+
 
 const fireplaceSchema = new mongoose.Schema({
   groupType: {
@@ -15,4 +17,5 @@ const fireplaceSchema = new mongoose.Schema({
 });
 
 const Fireplace = mongoose.model("Fireplace", fireplaceSchema);
-export default Fireplace;
+// export default Fireplace;
+module.exports = Fireplace;

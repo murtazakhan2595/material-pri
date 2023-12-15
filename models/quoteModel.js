@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const quoteSchema = new mongoose.Schema(
   {
@@ -28,4 +29,5 @@ const quoteSchema = new mongoose.Schema(
 );
 
 const Quotes = mongoose.model("Quotes", quoteSchema);
-export default Quotes;
+// export default Quotes;
+module.exports = Quotes;

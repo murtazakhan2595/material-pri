@@ -1,4 +1,6 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
+const mongoose = require("mongoose");
+
 
 // Define the Mosaic schema
 const mosaicSchema = new mongoose.Schema({
@@ -23,4 +25,5 @@ const mosaicSchema = new mongoose.Schema({
 });
 
 const Mosaic = mongoose.model("Mosaic", mosaicSchema);
-export default Mosaic;
+// export default Mosaic;
+module.exports = Mosaic;

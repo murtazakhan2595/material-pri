@@ -1,12 +1,23 @@
-import AppError from "../utils/appError.js";
-import catchAsync from "../utils/catchAsync.js";
-// import Employee from "../models/EmployeeModel.js";
+// import AppError from "../utils/appError.js";
+// import catchAsync from "../utils/catchAsync.js";
+// // import Employee from "../models/EmployeeModel.js";
+// const Employee = require("../models/employeeModel.js");
+// import Jimp from "jimp";
+// import sharp from "sharp";
+// import path from "path";
+// import { dirname } from "path";
+// import { fileURLToPath } from "url";
+const AppError = require("../utils/appError.js");
+const catchAsync = require("../utils/catchAsync.js");
+// const Employee = require("../models/EmployeeModel.js");
 const Employee = require("../models/employeeModel.js");
-import Jimp from "jimp";
-import sharp from "sharp";
-import path from "path";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+const Jimp = require("jimp");
+const sharp = require("sharp");
+const path = require("path");
+const { dirname } = require("path");
+const { fileURLToPath } = require("url");
+
+
 
 const getAll = catchAsync(async (req, res, next) => {
   // Empty `filter` means "match all documents"
@@ -151,7 +162,14 @@ const deleteEmployee = catchAsync(async (req, res, next) => {
     data: null,
   });
 });
-export default {
+// export default {
+//   createEmployee,
+//   deleteEmployee,
+//   getAll,
+//   get,
+//   update,
+// };
+module.exports ={
   createEmployee,
   deleteEmployee,
   getAll,

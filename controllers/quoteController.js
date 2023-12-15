@@ -1,10 +1,19 @@
-import AppError from "../utils/appError.js";
-import catchAsync from "../utils/catchAsync.js";
-import Quote from "./../models/quoteModel.js";
-import Customer from "../models/customerModel.js";
-import Mosaic from "./../models/mosaicModel.js";
-import Flatwork from './../models/flatworkModel.js';
-import Fireplace from './../models/fireplaceModel.js';
+// import AppError from "../utils/appError.js";
+// import catchAsync from "../utils/catchAsync.js";
+// import Quote from "./../models/quoteModel.js";
+// import Customer from "../models/customerModel.js";
+// import Mosaic from "./../models/mosaicModel.js";
+// import Flatwork from './../models/flatworkModel.js';
+// import Fireplace from './../models/fireplaceModel.js';
+
+const AppError = require("../utils/appError.js");
+const catchAsync = require("../utils/catchAsync.js");
+const Quote = require("./../models/quoteModel.js");
+const Customer = require("../models/customerModel.js");
+const Mosaic = require("./../models/mosaicModel.js");
+const Flatwork = require("./../models/flatworkModel.js");
+const Fireplace = require("./../models/fireplaceModel.js");
+
 
 const getAll = catchAsync(async (req, res, next) => {
   const filter = {};
@@ -264,7 +273,14 @@ const deleteQuote = catchAsync(async (req, res, next) => {
   });
 });
 
-export default {
+// export default {
+//   addQuote,
+//   getAll,
+//   get,
+//   update,
+//   deleteQuote,
+// };
+module.exports = {
   addQuote,
   getAll,
   get,

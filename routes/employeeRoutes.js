@@ -1,6 +1,10 @@
-import express from "express";
-import authController from "../controllers/authController.js";
-import employeeController from "../controllers/employeeController.js";
+// import express from "express";
+// import authController from "../controllers/authController.js";
+// import employeeController from "../controllers/employeeController.js";
+const express = require("express");
+const authController = require("../controllers/authController.js");
+const employeeController = require("../controllers/employeeController.js");
+
 
 const router = express.Router();
 
@@ -33,4 +37,6 @@ router.patch(
   authController.restrictTo("admin", "super-admin"),
   employeeController.update
 );
-export { router };
+// export { router };
+
+module.exports = router

@@ -1,8 +1,14 @@
-import Flatwork from "../models/flatworkModel.js";
-import AppError from "../utils/appError.js";
-import catchAsync from "../utils/catchAsync.js";
-import Mosaic from "./../models/mosaicModel.js";
-import Fireplace from "../models/fireplaceModel.js";
+// import Flatwork from "../models/flatworkModel.js";
+// import AppError from "../utils/appError.js";
+// import catchAsync from "../utils/catchAsync.js";
+// import Mosaic from "./../models/mosaicModel.js";
+// import Fireplace from "../models/fireplaceModel.js";
+const Flatwork = require("../models/flatworkModel.js");
+const AppError = require("../utils/appError.js");
+const catchAsync = require("../utils/catchAsync.js");
+const Mosaic = require("./../models/mosaicModel.js");
+const Fireplace = require("../models/fireplaceModel.js");
+
 
 const getAll = catchAsync(async (req, res, next) => {
 
@@ -144,7 +150,14 @@ const deleteProduct = catchAsync(async (req, res, next) => {
   });
 });
 
-export default {
+// export default {
+//   addProduct,
+//   getAll,
+//   get,
+//   update,
+//   deleteProduct,
+// };
+module.exports = {
   addProduct,
   getAll,
   get,

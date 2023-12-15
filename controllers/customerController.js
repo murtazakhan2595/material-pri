@@ -1,8 +1,15 @@
-import AppError from "../utils/appError.js";
-import catchAsync from "../utils/catchAsync.js";
-import Customer from "./../models/customerModel.js";
-// import Employee from "../models/EmployeeModel.js";
+// import AppError from "../utils/appError.js";
+// import catchAsync from "../utils/catchAsync.js";
+// import Customer from "./../models/customerModel.js";
+// // import Employee from "../models/EmployeeModel.js";
+// const Employee = require("../models/employeeModel.js");
+
+const AppError = require("../utils/appError.js");
+const catchAsync = require("../utils/catchAsync.js");
+const Customer = require("./../models/customerModel.js");
+// const Employee = require("../models/EmployeeModel.js");
 const Employee = require("../models/employeeModel.js");
+
 
 const getAll = catchAsync(async (req, res, next) => {
   // Empty `filter` means "match all documents"
@@ -105,7 +112,15 @@ const update = catchAsync(async (req, res, next) => {
   });
 });
 
-export default {
+// export default {
+//   create,
+//   getAll,
+//   deleteCustomer,
+//   update,
+//   get,
+// };
+
+module.exports = {
   create,
   getAll,
   deleteCustomer,

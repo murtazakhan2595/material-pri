@@ -1,9 +1,16 @@
-import AppError from "../utils/appError.js";
-import catchAsync from "../utils/catchAsync.js";
-// import Employee from "../models/EmployeeModel.js";
-const Employee = require('../models/employeeModel.js')
-import jwt from "jsonwebtoken";
-import { promisify } from "util";
+// import AppError from "../utils/appError.js";
+// import catchAsync from "../utils/catchAsync.js";
+// // import Employee from "../models/EmployeeModel.js";
+// const Employee = require('../models/employeeModel.js')
+// import jwt from "jsonwebtoken";
+// import { promisify } from "util";
+const AppError = require("../utils/appError.js");
+const catchAsync = require("../utils/catchAsync.js");
+// const Employee = require("../models/EmployeeModel.js");
+const Employee = require("../models/employeeModel.js");
+const jwt = require("jsonwebtoken");
+const { promisify } = require("util");
+
 
 const signToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -135,7 +142,14 @@ const restrictTo = (...roles) => {
   };
 };
 
-export default {
+// export default {
+//   login,
+//   protect,
+//   signup,
+//   logout,
+//   restrictTo,
+// };
+module.exports = {
   login,
   protect,
   signup,

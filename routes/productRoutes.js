@@ -1,6 +1,10 @@
-import express from "express";
-import authController from "../controllers/authController.js";
-import productController from "../controllers/productController.js";
+// import express from "express";
+// import authController from "../controllers/authController.js";
+// import productController from "../controllers/productController.js";
+const express = require("express");
+const authController = require("../controllers/authController.js");
+const productController = require("../controllers/productController.js");
+
 
 const router = express.Router();
 
@@ -23,4 +27,6 @@ router.patch(
   productController.update
 );
 
-export { router };
+// export { router };
+
+module.exports = router;

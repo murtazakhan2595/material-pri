@@ -62,4 +62,6 @@ const globalErrorHandler = (err, req, res, next) => {
   sendErrorDev(err, req, res);
 };
 
-export default globalErrorHandler;
+// export default globalErrorHandler;
+
+module.exports = globalErrorHandler
